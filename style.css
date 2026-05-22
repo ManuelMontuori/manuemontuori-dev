@@ -1,0 +1,663 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: 'Playflair Display', serif;
+  font-weight: 600;
+}
+
+h3, h4, h5 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+
+::selection {
+  background-color: #5e8bed;
+  color: white;
+}
+
+.hero h1::selection,
+.hero h2::selection, 
+.hero p::selection, 
+.hero a::selection,
+.hero i::selection {
+  background-color: rgb(172, 128, 88);
+  color: black;
+}
+
+
+.hero {
+  min-height: 80vh;
+  background: linear-gradient(
+                rgba(0,0,0,0.4),
+                rgba(0,0,0,0.7)
+              ),
+              url('img/provaHero.webp') center/cover no-repeat;
+}
+/* CARD BASE */
+.custom-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+}
+
+/* HOVER EFFETTO MODERNO */
+.custom-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* IMMAGINE */
+.card-img {
+  height: 220px;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* ZOOM IMAGE ON HOVER */
+.custom-card:hover img {
+  transform: scale(1.1);
+}
+
+/* TESTO */
+.custom-card .card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.custom-card h5 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.custom-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* le colonne diventano flex container */
+.col-md-4.d-flex {
+  display: flex;
+}
+
+
+
+/* corpo che riempie lo spazio */
+.custom-card .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* link base */
+.navbar .nav-link {
+  color: #333;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+/* hover elegante */
+.navbar .nav-link:hover {
+  background: #5e8bed;
+  color: white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+
+.btn-costumer {
+  transition: all 0.25s ease;
+  border-radius: 8px;
+  background-color: #5e8bed;
+}
+
+.btn-costumer:hover {
+  transform: scale(1.05);
+  background-color: #326ded;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+
+.step-card {
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Cerchio numero */
+.step-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #212529; /* colore bootstrap dark */
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin: 0 auto 15px;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+
+
+
+.product-card {
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.partner-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.partner-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+
+.form-contatti-home {
+  background: #2c3e50;
+  color: #ecf0f1;
+  border-top-left-radius: 85px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 30px;
+  margin-bottom: 10px;
+  padding: 25px;
+  }
+
+.form-contatti-home label {
+  color: #bdc3c7;
+}
+
+
+.form-contatti-home input,
+.form-contatti-home textarea {
+  background: #34495e;
+  color: #ecf0f1;
+  border: 1px solid #7f8c8d;
+}
+.form-contatti-home .form-select {
+  background-color: #34495e !important;
+  color: #ecf0f1 !important;
+  border: 1px solid #7f8c8d;
+}
+
+.form-contatti-home input::-webkit-input-placeholder,
+.form-contatti-home textarea::-webkit-input-placeholder {
+  color:rgba(255, 255, 255, 0.8);
+}
+
+.form-contatti-home input::-moz-placeholder,
+.form-contatti-home textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+}
+
+.form-contatti-home input:-ms-input-placeholder,
+.form-contatti-home textarea:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.form-contatti-home input::placeholder,
+.form-contatti-home textarea::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+}
+
+
+
+/* Form prenotazione libri */
+/* Titoli sezioni */
+.section-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #6c757d;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Input più morbidi */
+.form-control {
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+/* Animazione indirizzo */
+#indirizzoContainer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+#indirizzoContainer.show {
+  max-height: 120px;
+  opacity: 1;
+}
+
+/* Focus più elegante */
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0,0,0,0.1);
+  border-color: #212529;
+}
+ 
+
+
+
+.custom-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease;
+}
+
+
+.parallax-section {
+  height: 600px;
+  background-image: url("img/finale.webp");
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.prenotazione-sfondo {
+  background-image: url("img/serviziBackground1.webp");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  min-height: 50vh;
+  width: 100%;
+}
+@media (min-width: 1025px) {
+  .parallax-section,
+  .prenotazione-sfondo {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 1366px) {
+  .prenotazione-sfondo,
+  .parallax-section {
+    background-attachment: scroll !important;
+  }
+}
+/* 1. Blocca lo scroll orizzontale su tutto il sito */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Sistema le Row di Bootstrap che spesso creano la fascia bianca */
+.row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+
+.footer {
+  font-size: 14px;
+}
+
+.footer h5 {
+  margin-bottom: 15px;
+}
+
+.footer i {
+  margin-right: 6px;
+  color: #bbb;
+}
+
+.footer-item {
+  margin-bottom: 0.25rem;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer a:hover {
+  transform: scale(1.06);
+  opacity: 0.85;
+}
+
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+  background: #2c3e50;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+#scrollTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#scrollTopBtn:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+/* inizio prova nuovo form contatti */
+
+.section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.gray-bg {
+    background-color: #f5f5f5;
+}
+/* Contact Us
+---------------------*/
+.contact-name {
+  margin-bottom: 30px;
+}
+.contact-name h5 {
+  font-size: 22px;
+  color: #20247b;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.contact-name p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.social-share a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  text-align: center;
+  margin-right: 10px;
+}
+.social-share .instagram {
+  box-shadow: 0 8px 30px -4px rgba(234, 76, 137, 0.5);
+  background-color: #E1306C ;
+}
+.social-share .facebook {
+  box-shadow: 0 8px 30px -4px rgba(0, 103, 255, 0.5);
+  background-color: #0067ff;
+}
+.social-share .whatsapp {
+  box-shadow: 0 8px 30px -4px rgba(1, 119, 172, 0.5);
+  background-color: #128C7E;
+}
+
+.contact-form .form-control {
+  border: none;
+  border-bottom: 1px solid #20247b;
+  background: transparent;
+  border-radius: 0;
+  padding-left: 0;
+  box-shadow: none !important;
+}
+.contact-form .form-control:focus {
+  border-bottom: 1px solid #fc5356;
+}
+.contact-form .form-control.invalid {
+  border-bottom: 1px solid #ff0000;
+}
+.contact-form .send {
+  margin-top: 20px;
+}
+@media (max-width: 767px) {
+  .contact-form .send {
+    margin-bottom: 20px;
+  }
+}
+
+.section-title h2 {
+    font-weight: 700;
+    color: #20247b;
+    font-size: 45px;
+    margin: 0 0 15px;
+    border-left: 5px solid #fc5356;
+    padding-left: 15px;
+}
+.section-title {
+    padding-bottom: 45px;
+}
+.contact-form .send {
+    margin-top: 20px;
+}
+.px-btn {
+    padding: 0 50px 0 20px;
+    line-height: 60px;
+    position: relative;
+    display: inline-block;
+    color: #20247b;
+    background: none;
+    border: none;
+}
+.px-btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 30px;
+    background: transparent;
+    border: 1px solid rgba(252, 83, 86, 0.6);
+    border-right: 1px solid transparent;
+    -moz-transition: ease all 0.35s;
+    -o-transition: ease all 0.35s;
+    -webkit-transition: ease all 0.35s;
+    transition: ease all 0.35s;
+    width: 60px;
+    height: 60px;
+}
+.px-btn .arrow {
+    width: 13px;
+    height: 2px;
+    background: currentColor;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 25px;
+}
+.px-btn .arrow:after {
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid currentColor;
+    border-top: 2px solid currentColor;
+    content: "";
+    position: absolute;
+    top: -3px;
+    right: 0;
+    display: inline-block;
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/* fine prova nuovo form contatti */
+
+/* inizio slider recensioni */
+.review-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.review-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scrollReviews 20s linear infinite;
+}
+
+.review-card {
+  min-width: 280px;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+  text-align: left;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.stars {
+  color: #ffc107;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.review-wrapper:hover .review-track {
+  animation-play-state: paused;
+}
+
+
+/* Animazione */
+@keyframes scrollReviews {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feature-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.feature-item span {
+  font-size: 20px;
+}
+
+.feature-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+.lead-text {
+  font-size: 1.05rem;
+  color: #6c757d;
+  max-width: 480px;
+}
+
+@media (max-width: 767px) {
+  .lead-text {
+    text-align: center;
+    margin: 0 auto 20px;
+  }
+}
+
+/* BLOCCO DESTRO */
+.highlight-box {
+  background: white;
+  padding: 40px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  max-width: 300px;
+  margin: auto;
+}
+
+.highlight-box h3 {
+  font-size: 2.5rem;
+  color: #5e8bed;
+}
+
+.highlight-box {
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+.highlight-box:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .highlight-box {
+    margin-top: 0; /* normale su desktop */
+  }
+}
+
