@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sito in costruzione</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #0f172a;
+      color: white;
+      overflow: hidden;
+    }
+
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background:
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.25), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.25), transparent 35%),
+        #0f172a;
+      z-index: -2;
+    }
+
+    .blur {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.4;
+      animation: move 10s infinite alternate ease-in-out;
+    }
+
+    .blur.one {
+      background: #3b82f6;
+      top: -100px;
+      left: -100px;
+    }
+
+    .blur.two {
+      background: #8b5cf6;
+      bottom: -150px;
+      right: -100px;
+    }
+
+    @keyframes move {
+      from {
+        transform: translateY(0px) translateX(0px);
+      }
+
+      to {
+        transform: translateY(40px) translateX(30px);
+      }
+    }
+
+    .container-box {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 28px;
+      padding: 60px 40px;
+      max-width: 700px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .badge-custom {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 14px;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 5rem);
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #60a5fa, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 1.1rem;
+      line-height: 1.8;
+      max-width: 550px;
+      margin: auto;
+    }
+
+    .buttons {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn-custom {
+      padding: 14px 28px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary-custom {
+      background: white;
+      color: #0f172a;
+    }
+
+    .btn-primary-custom:hover {
+      transform: translateY(-3px);
+      background: #f1f5f9;
+    }
+
+    .btn-outline-custom {
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: white;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .btn-outline-custom:hover {
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-text {
+      margin-top: 40px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.45);
+    }
+
+    @media(max-width: 768px) {
+      .glass-card {
+        padding: 40px 25px;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="background"></div>
+
+  <div class="blur one"></div>
+  <div class="blur two"></div>
+
+  <div class="container-box">
+
+    <div class="glass-card">
+
+      <div class="badge-custom">
+        🚧 Website in costruzione
+      </div>
+
+      <h1>
+        Sto creando qualcosa di
+        <span class="gradient-text">speciale</span>
+      </h1>
+
+      <p>
+        Il mio nuovo sito portfolio sarà presto online.
+        Web design moderno, sviluppo frontend/backend e progetti personalizzati.
+      </p>
+
+      <div class="buttons">
+
+        <a href="mailto:tuaemail@email.com"
+          class="btn-custom btn-primary-custom">
+          Contattami
+        </a>
+
+        <a href="https://github.com/"
+          target="_blank"
+          class="btn-custom btn-outline-custom">
+          GitHub
+        </a>
+
+      </div>
+
+      <div class="footer-text">
+        © 2026 - Manuel Montuori
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
